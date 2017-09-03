@@ -31,3 +31,5 @@ Here's the full list of commit emoji repos, not standard unicode alt codes
 https://www.webpagefx.com/tools/emoji-cheat-sheet/
 
 uncommit this part using `head`
+
+/play secret play Zelda sound :white_check_mark

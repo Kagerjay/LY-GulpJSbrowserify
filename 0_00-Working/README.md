@@ -29,3 +29,5 @@ Here's the full list of commit emoji repos, not standard unicode alt codes
 :smile: :blush: :rage: :yum: :alien:
 
 https://www.webpagefx.com/tools/emoji-cheat-sheet/
+
+uncommit this part using `head`

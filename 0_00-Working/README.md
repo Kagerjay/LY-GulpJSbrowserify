@@ -23,3 +23,9 @@ Unicode test again
 Fixed whatever, time for :beers:
 
 'Meow meow meow :octocat:'
+
+Here's the full list of commit emoji repos, not standard unicode alt codes
+
+:smile: :blush: :rage: :yum: :alien:
+
+https://www.webpagefx.com/tools/emoji-cheat-sheet/

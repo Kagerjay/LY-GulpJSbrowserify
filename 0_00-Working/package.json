@@ -1,0 +1,19 @@
+{
+  "name": "gulp-js-browserify",
+  "version": "1.0.0",
+  "description": "A project to showcase workflows",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kagerjay/LY-GulpJSbrowserify.git"
+  },
+  "author": "Vincent",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kagerjay/LY-GulpJSbrowserify/issues"
+  },
+  "homepage": "https://github.com/Kagerjay/LY-GulpJSbrowserify#readme"
+}

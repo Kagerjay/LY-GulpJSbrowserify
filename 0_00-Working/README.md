@@ -17,3 +17,9 @@ Lorem Ipsum Blah blah blah
 ☀ Sunny
 ✓ Kay
 ✗ No
+
+Unicode test again
+
+Fixed whatever, time for :beers:
+
+'Meow meow meow :octocat:'

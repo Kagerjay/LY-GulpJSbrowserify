@@ -1,6 +1,7 @@
 var gulp = require('gulp');
     gutil = require('gulp-util');
     coffee = require('gulp-coffee');
+    browserify = require('gulp-browserify');
     concat = require('gulp-concat');
 
 gulp.task('log', function(){
@@ -8,6 +9,7 @@ gulp.task('log', function(){
 
 });
 
+//source data
 var coffeeSources = ['components/coffee/tagline.coffee'];
 var jsSources = [
   'components/scripts/rclick.js',
@@ -28,5 +30,6 @@ gulp.task('coffee',function(){
 gulp.task('js',function(){
   gulp.src(jsSources)
     .pipe(concat('script.js'))  //one file that we will reference in index.html
+    .pipe(browserify())
     .pipe(gulp.dest('builds/development/js')) //final destination
 });

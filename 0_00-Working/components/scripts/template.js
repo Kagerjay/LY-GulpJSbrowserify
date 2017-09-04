@@ -1,4 +1,4 @@
-$(function() {
+$(function() { //mustache js now works when we add dependency?
   var Mustache = require('mustache');
 
   $.getJSON('js/data.json', function(data) {

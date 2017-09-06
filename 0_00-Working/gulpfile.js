@@ -28,8 +28,9 @@ gulp.task('coffee',function(){
     .pipe(gulp.dest('components/scripts')) //push results to scripts folder
 });
 
+//Extra Parameter 'coffee'
 //Combines javascript files together from source
-gulp.task('js',function(){
+gulp.task('js', ['coffee'], function(){
   gulp.src(jsSources)
     .pipe(concat('script.js'))  //one file that we will reference in index.html
     .pipe(browserify())
@@ -47,3 +48,6 @@ gulp.task('compass',function(){
     .on('error', gutil.log)
     .pipe(gulp.dest('builds/development/css')) //final destination
 });
+
+//No call back task
+gulp.task('default', ['coffee', 'js', 'compass']);

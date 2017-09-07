@@ -3,6 +3,7 @@ var gulp = require('gulp');
     coffee = require('gulp-coffee');
     browserify = require('gulp-browserify');
     compass = require('gulp-compass'),
+    connect = require('gulp-connect'),
     concat = require('gulp-concat');
 
 gulp.task('log', function(){
@@ -35,6 +36,8 @@ gulp.task('js', ['coffee'], function(){
     .pipe(concat('script.js'))  //one file that we will reference in index.html
     .pipe(browserify())
     .pipe(gulp.dest('builds/development/js')) //final destination
+    .pipe(gulp.dest('components/scripts')) //for live-reload, so whenever script.js  show new site
+    .pipe(connect.reload()) //for livereload as well
 });
 
 //Sass process data
@@ -47,13 +50,23 @@ gulp.task('compass',function(){
     }))
     .on('error', gutil.log)
     .pipe(gulp.dest('builds/development/css')) //final destination
+    .pipe(connect.reload()) //live reload
 });
 
-//No call back task
-gulp.task('default', ['coffee', 'js', 'compass', 'watch']);
-
+//Watches folder for changes and then executes another function
 gulp.task('watch', function(){
   gulp.watch(coffeeSources,['coffee']);
   gulp.watch(jsSources,['js']);
   gulp.watch('components/sass/*.scss',['compass']);
 });
+
+//Live reload server
+gulp.task('connect', function(){
+  connect.server({
+    root: 'builds/development/',
+    livereload: true
+  });
+});
+
+//No call back task
+gulp.task('default', ['coffee', 'js', 'compass', 'connect', 'watch']); //default is default parameter, if you use "all" its treated as passed Parameter
